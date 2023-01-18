@@ -52,7 +52,7 @@
           },
           success: function(data){
             var x = document.getElementById('res').getAttribute('href');
-            $('a').html(window.location.href+data)
+            $('a').html('https://urlshorter-production.up.railway.app/'+data)
             $('#res').attr("href",data)
           }
         });
