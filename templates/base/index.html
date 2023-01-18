@@ -5,20 +5,37 @@
 	<title>UrlShorter</title>
     <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <style>
     body{
-        background-image: url("{% static 'darkas.png' %}");
-        background-size: cover;
+        background: url("{% static 'darkas.png' %}") no-repeat center center fixed;
+		background-size: cover;
     }
-      .transparent-div {
-        background-color: rgba(39, 39, 39, 0.4); /* Transparent white background */
-        padding: 160px;
-        text-align: center;
-        position: absolute;
-        top: 65%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-      }
+	-o-background-size:35% auto;
+	-webkit-background-size:35% auto;
+	-moz-background-size:35% auto;
+	background-size:35% auto;
+	.transparent-div {
+	background-color: rgba(39, 39, 39, 0.4); /* Transparent white background */
+	padding: 160px;
+	text-align: center;
+	position: absolute;
+	top: 65%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	}
+	
+	h1 {
+	font-size: 24px;
+	}
+
+	/* Media query styles */
+	@background-image (max-width: 600px) {
+	h1 {
+	  font-size: 18px;
+	}
+	}
     </style>
   </head>
   <body>
