@@ -10,6 +10,9 @@ def home(request):
 def create(request):
     if request.method == 'POST':
         link = request.POST['link']
+        if 'https://' not in link:
+            link = 'https://' + link
+            
         uid = str(uuid.uuid4())[:5]
         newmake = Make(link=link, uuid=uid)
         newmake.save()
